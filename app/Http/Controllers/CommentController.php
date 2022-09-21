@@ -30,12 +30,6 @@ class CommentController extends Controller
     {
 
         $userArr = ['created_at' => now()];
-        if (auth('admin')->check()) {
-            $userArr['admin_id'] = auth('admin')->id();
-        } else {
-            $userArr['user_id'] = auth()->id();
-        }
-
         $comment = auth()->user()->comments()->create(array_merge($request->validated(), $userArr));
         return response()->json([
             'message' => "New Comment created successfully",
