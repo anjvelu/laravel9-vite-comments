@@ -8,11 +8,10 @@
 
 Compile front-end assets using [Laravel Vite](https://laravel.com/docs/9.x/vite).
 
-```sh
 # Development build: expanded code, sourcemaps
+
 npm run dev
 
-
 # Production build: minified files, no sourcemaps
+
 npm run production
-```
